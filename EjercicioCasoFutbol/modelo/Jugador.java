@@ -6,6 +6,7 @@ public class Jugador
     private String nombre;
     private int edad;
     private int goles;
+    private int codigo;
 
     //Métodos
     public Jugador()
@@ -13,13 +14,15 @@ public class Jugador
         nombre = "";
         edad= 0;
         goles = 0;
+        codigo= 0;
     }
 
-    public Jugador(String n, int g, int e)
+    public Jugador(String n, int g, int e,int c)
     {
         nombre = n;
         goles = g;
         edad = e;
+        codigo= c;
     }
     
     public void setGoles(int g)
@@ -41,6 +44,16 @@ public class Jugador
         return edad;
     }
 
+    public void setCodigo(int c)
+    {
+        codigo = c;
+    }
+
+    public int getCodigo()
+    {
+        return codigo;
+    }
+
     public void setNombre(String n)
     {
         nombre = n;
@@ -53,6 +66,6 @@ public class Jugador
 
     public String toString()
     {
-        return nombre + " con " + goles + " goles.";
+        return nombre + "hizo " + goles + " goles. \ncodigo: " + codigo + "\nedad: " + edad;
     }
 }

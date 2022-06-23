@@ -33,10 +33,12 @@ public class Equipo
         String nom = "";
         int goles = 0;
         int edad = 0;
+        int codigo= 0;
         nom = JOptionPane.showInputDialog("Nombre del jugador: ");
         goles = Integer.parseInt(JOptionPane.showInputDialog("Goles del jugador: "));
         edad = Integer.parseInt(JOptionPane.showInputDialog("Edad del jugador: "));
-        return new Jugador(nom, goles, edad);
+        codigo = Integer.parseInt(JOptionPane.showInputDialog("Codigo del jugador: "));
+        return new Jugador(nom, goles, edad, codigo);
     }
 
     public int calcularTotalGoles()
@@ -62,7 +64,13 @@ public class Equipo
                 golesGoleador = jugadores[i].getGoles();
 
             }
+            //if(jugadores[i].getCodigo() ==21)
+        //{
+           // jugadores[i].getGoles(g) += 5;
+        //}
         }
+        
+
         return golesGoleador;
     }
     public String calcularGoleador()
